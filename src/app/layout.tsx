@@ -4,6 +4,8 @@ import ThemeSwitcher from './ThemeSwitcher'
 
 import './styles/globals.css'
 import Providers from './providers'
+import Navbar from './components/navbar'
+import SwitchTheme from './SwitchTheme'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
       </head>
       <body>
-        <Providers><ThemeSwitcher />{children}</Providers>
+        <Providers><Navbar/>{children}</Providers>
       </body>
     </html>
   )

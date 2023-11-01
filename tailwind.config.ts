@@ -1,7 +1,15 @@
 import type { Config } from 'tailwindcss'
+const colors = require("tailwindcss/colors");
 
 const config: Config = {
-  
+  daisyui: {
+    themes: ["light", "dark", "cupcake", "retro"],
+  },
+  darkmode: false,
+  variants: {
+    justifyItems: ['responsive', 'hover', 'focus'],
+
+  },
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -16,11 +24,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
   
 }
-module.exports = {
-  darkMode: 'class',
-  // ...
-}
+
 export default config
